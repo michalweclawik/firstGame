@@ -3,20 +3,23 @@
     padding: 0;
 }
 
-body {
+
+
+.main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     height: 100vh;
     width: 100vw;
-}
+    // text-align: center;
+    background-image: url(./krecik.jpg);
+    background-size: cover;
+    overflow: hidden;
 
-.main {
 
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+
+
 
 
     .welcome {
@@ -56,5 +59,122 @@ body {
 
             }
         }
+    }
+}
+
+.gameSection {
+    margin-top: 5%;
+    width: 406px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    background-color: green;
+    overflow: hidden;
+    opacity: 0.91;
+    border-radius: 10px;
+
+
+
+    &__score {
+        color: azure;
+        font-size: 2em;
+        margin: 30px;
+        text-align: center;
+
+    }
+
+    &__playGround {
+        margin: auto;
+        height: 400px;
+        width: 400px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 20px;
+
+        &__playGroundSection {}
+
+
+    }
+
+}
+
+#gameSection__startButton {
+    padding: 5px;
+    border: 0.5px solid red;
+    border-radius: 5px;
+    width: 100px;
+    margin: auto;
+    margin-bottom: 10px; // background-color: bisque;
+    opacity: 0.8;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+
+// // don work ??????whyhhhththth
+// .gameSection__playGround:hover {
+//     cursor: url("./mallet1.png");
+// }
+
+#malet {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    background-image: url('./cursor.cur');
+    background-size: 100%, 100%;
+    // transform: translate(-50%, -50%) rotate(-90deg);
+    transition: 0.2ms;
+    pointer-events: none;
+
+}
+
+.active {
+    transform: translate(-50%, -50%) rotate(-120deg);
+}
+
+.gameSection__molehill {
+    position: relative;
+}
+
+// .mole {
+//     position: absolute;
+// }
+
+.gameSection__playGroundSection {
+
+    background-image: url("./rsz_mole2.png");
+    background-repeat: no-repeat;
+    position: relative;
+
+}
+
+.mole {
+    height: 70px;
+
+}
+
+.gameSection__playGroundSection .mole {
+    width: 70%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20%;
+    animation: rise .1s ease-out;
+
+}
+
+@keyframes rise {
+    0% {
+        transform: translateX(0px) translateY(25px);
+    }
+
+    2% {
+        transform: translateX(-50%) translateY(25%);
     }
 }
