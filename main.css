@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.main .welcome h1 {
+  margin-top: 10%;
+  color: orange;
+  font-size: 6em;
+}
+.main .welcome h3 {
+  color: black;
+  font-size: 3em;
+}
+.main .welcome__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main .welcome__level1, .main .welcome__level2, .main .welcome__level3 {
+  margin: 20px 10px;
+  width: 100px;
+  padding: 10px;
+  border: 2px solid red;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-around;
+  font-weight: bold;
+}
+.main .welcome__level1:hover, .main .welcome__level2:hover, .main .welcome__level3:hover {
+  background-color: lightgrey;
+  cursor: pointer;
+}
