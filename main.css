@@ -92,17 +92,16 @@
   width: 60px;
   height: 60px;
   position: absolute;
-  top: 100px;
+  top: 50px;
   left: 100px;
-  background-image: url("./cursor.cur");
+  background-image: url("./cursor.png");
   background-size: 100%, 100%;
-  transform: translate(-50%, -50%);
   transition: 0.2ms;
   pointer-events: none;
 }
 
 .active {
-  transform: rotate(-120deg);
+  transform: translate(-50%, -50%) rotate(-120deg);
 }
 
 .gameSection__molehill {
