@@ -67,7 +67,9 @@
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
   gap: 20px;
+  cursor: none;
 }
+
 #gameSection__startButton,
 #gameSection__resetButton {
   padding: 5px;
@@ -88,7 +90,7 @@
   margin-top: 2%;
 }
 
-#malet {
+.malet {
   width: 60px;
   height: 60px;
   position: absolute;
@@ -96,6 +98,7 @@
   left: 100px;
   background-image: url("./cursor.png");
   background-size: 100%, 100%;
+  transform: translate(-50%, -50%);
   transition: 0.2ms;
   pointer-events: none;
 }
