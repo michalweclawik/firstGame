@@ -8,12 +8,12 @@
 .main {
     display: flex;
     flex-direction: column;
-
     align-items: center;
     height: 100vh;
     width: 100vw;
+    background-color: wheat;
     // text-align: center;
-    background-image: url(./krecik.jpg);
+    background-image: url(./mole.png);
     background-size: cover;
     overflow: hidden;
 
@@ -23,13 +23,23 @@
 
 
     .welcome {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        display: contents;
+
+
+
         h1 {
-            margin-top: 10%;
-            color: orange;
+            text-align: center;
+            color: burlywood;
             font-size: 6em;
         }
 
         h3 {
+            text-align: center;
             color: black;
             font-size: 3em;
         }
@@ -41,9 +51,21 @@
 
         }
 
-        &__level1,
-        &__level2,
-        &__level3 {
+        &__container {
+            display: block;
+            margin-top: 10%;
+            width: 400px;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: lightgrey;
+            opacity: 0.95;
+
+        }
+
+        &__level {
             margin: 20px 10px;
             width: 100px;
             padding: 10px;
@@ -68,10 +90,11 @@
     height: 450px;
     display: flex;
     flex-direction: column;
-    background-color: green;
+    background-color: lightsalmon;
     overflow: hidden;
     opacity: 0.91;
     border-radius: 10px;
+    display: none;
 
 
 
@@ -91,7 +114,7 @@
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, 1fr);
         gap: 20px;
-        cursor: none;
+        // cursor: none;
 
     }
 
@@ -99,7 +122,8 @@
 
 
 #gameSection__startButton,
-#gameSection__resetButton {
+#gameSection__resetButton,
+#gameSection__mainButton {
     padding: 5px;
     border: 0.5px solid red;
     border-radius: 5px;
@@ -109,6 +133,8 @@
     opacity: 0.8;
     cursor: pointer;
 
+
+
     &:hover {
         opacity: 1;
     }
@@ -116,6 +142,13 @@
 
 .buttons {
     margin-top: 2%;
+
+}
+
+.gameSection>.buttons {
+
+    display: none;
+
 }
 
 
@@ -134,7 +167,7 @@
     background-size: 100%, 100%;
     transform: translate(-50%, -50%);
     transition: 0.2ms;
-    pointer-events: none;
+    // pointer-events: none;
 
 }
 
@@ -168,7 +201,7 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 20%;
+    bottom: 38%;
     animation: rise .1s ease-out;
 
 }

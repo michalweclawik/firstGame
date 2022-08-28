@@ -1,15 +1,55 @@
 "use strict";
 
-var beginerLevel = document.querySelector(".welcome__level1");
+// welcome section
+var buttons = document.querySelectorAll('.welcome__level'); // const beginerLevel = document.querySelector(".welcome__level1");
+// const mediumLevel = document.querySelector(".welcome__level2");
+// const expertLevel = document.querySelector(".welcome__level3");
+// game section
+
 var holes = document.querySelectorAll(".gameSection__playGroundSection");
 var playWindow = document.querySelector(".gameSection__playGround");
 var welcome = document.querySelector(".welcome");
 var cursor = document.querySelector(".malet");
+var gameButtons = document.querySelectorAll('.buttons');
 var scoreDisplay = document.querySelector('#gameSection__result');
 var startButton = document.querySelector('#gameSection__startButton');
 var resetButton = document.querySelector('#gameSection__resetButton');
-var onOFF = true;
+var gameSection = document.querySelector('.gameSection');
+var onOFF = false;
 var score = 0;
+var gameSpeed = 0;
+
+var setLevel = function setLevel(event) {
+  console.log(event.target.innerHTML);
+
+  if (event.target.innerHTML === 'Beginer') {
+    gameSpeed = 1500;
+  } else if (event.target.innerHTML === 'Medium') {
+    gameSpeed = 100;
+  } else if (event.target.innerHTML === 'Expert') {
+    gameSpeed = 500;
+  }
+
+  switchToSecondPage();
+};
+
+buttons.forEach(function (button) {
+  return button.addEventListener('click', setLevel);
+});
+
+var switchToSecondPage = function switchToSecondPage() {
+  welcome.style.display = 'none';
+  gameSection.style.display = 'unset'; // startButton.style.display = 'unset';
+  // resetButton.style.display = 'unset';
+  // gameButtons.style.display = 'unset';
+}; // const beginerStart = () => {
+//     gameSpeed = 500
+//     switchToSecondPage()
+// }
+// beginerLevel.addEventListener('click', beginerStart)
+// mediumLevel.addEventListener('click', () => gameSpeed = 1000)
+// expertLevel.addEventListener('click', () => gameSpeed = 1500)
+
 
 var cleanWindow = function cleanWindow() {
   scoreDisplay.innerHTML = '';
@@ -39,7 +79,7 @@ var moleStart = function moleStart() {
     timer = setTimeout(function () {
       hole.removeChild(moleImage);
       moleStart();
-    }, 1500);
+    }, gameSpeed);
   }
 
   return;
@@ -50,23 +90,39 @@ var startGame = function startGame() {
   onOFF = true;
   moleStart();
 }; // beginerLevel.addEventListener("click", runGame)
+// const trackmallet = (event) => {
+//     cursor.style.left = event.pageX + 'px';
+//     cursor.style.top = event.pageY + 'px';
+// }
+// const rotateMalet = () => {
+//     cursor.classList.add("active")
+// }
+// const unRotateMalet = () => {
+//     cursor.classList.remove('active')
+// }
 
 
-var trackmallet = function trackmallet(event) {
-  cursor.style.left = event.pageX + 'px';
-  cursor.style.top = event.pageY + 'px';
+var gameButtonsAction = function gameButtonsAction(event) {
+  if (event.target.innerHTML === 'START') {
+    startGame();
+  }
+
+  if (event.target.innerHTML === 'RESET') {
+    cleanWindow();
+  }
+
+  if (event.target.innerHTML === 'GO BACK') {
+    welcome.style.display = '';
+    gameSection.style.display = 'none'; // startButton.style.display = 'unset';
+    // resetButton.style.display = 'unset';
+    // gameButtons.style.display = 'none';
+  }
 };
 
-var rotateMalet = function rotateMalet() {
-  cursor.classList.add("active");
-};
-
-var unRotateMalet = function unRotateMalet() {
-  cursor.classList.remove('active');
-};
-
-resetButton.addEventListener('click', cleanWindow);
-startButton.addEventListener('click', startGame);
-playWindow.addEventListener('mousemove', trackmallet);
-playWindow.addEventListener('mousedown', rotateMalet);
-playWindow.addEventListener('mouseup', unRotateMalet);
+gameButtons.forEach(function (button) {
+  return button.addEventListener('click', gameButtonsAction);
+}); // startButton.addEventListener('click', startGame);
+// resetButton.addEventListener('click', cleanWindow)
+// playWindow.addEventListener('mousemove', trackmallet);
+// playWindow.addEventListener('mousedown', rotateMalet);
+// playWindow.addEventListener('mouseup', unRotateMalet)
