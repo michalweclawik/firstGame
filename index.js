@@ -171,6 +171,12 @@ const gameButtonsAction = (event) => {
         welcome.style.display = '';
         gameSection.style.display = 'none';
         clearInterval(interval);
+        cleanWindow()
+        interval = '';
+        gameTimer.textContent = gameTime;
+        currentgameTime = null
+
+
     }
 }
 
@@ -179,7 +185,10 @@ const countDownTimer = () => {
     currentgameTime = gameTimer.textContent
     currentgameTime--
     gameTimer.textContent = currentgameTime
-
+    if (currentgameTime < 10) {
+        gameTimer.style.color = ("red")
+        gameTimer.style.fontSize = ("20px")
+    }
     if (currentgameTime == 0) {
         clearInterval(interval)
         // cleanWindow()
