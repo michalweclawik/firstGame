@@ -59,7 +59,11 @@ Add notes about how to use the system.
 
 ## 📸 Screenshots <a name = "screenshots"></a>
 
-Add additional notes about how to deploy this on a live system.
+<div>
+<img width=200px height=200px src="./pictures/Capture1.png" alt="Screenshots">
+<img width=200px height=200px src="./pictures/Capture2.png" alt="Screenshots">
+
+</div>
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
