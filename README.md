@@ -35,7 +35,7 @@ It was a fantastic adventure. After compliting project I spent hours playing in 
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
-Whack-A-Mole-Game is fully web based. Once you whack mole you getting poitns and mole is loosing glsses ! Be fast time is limited !
+Whack-A-Mole-Game is fully web based. Once you whack mole you getting poitns and mole is loosing glasses ! Be fast time is limited !
 
 ## 🎈 Usage <a name="usage"></a>
 
