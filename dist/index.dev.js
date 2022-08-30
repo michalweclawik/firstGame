@@ -2,16 +2,18 @@
 
 // welcome section
 var buttons = document.querySelectorAll('.welcome__level');
+var welcome = document.querySelector(".welcome"); // game section
+
 var holes = document.querySelectorAll(".gameSection__playGroundSection");
 var playWindow = document.querySelector(".gameSection__playGround");
-var welcome = document.querySelector(".welcome");
 var cursor = document.querySelector(".malet");
 var gameTimer = document.querySelector("#timer");
 var gameButtons = document.querySelectorAll('.buttons');
 var scoreDisplay = document.querySelector('#gameSection__result');
 var startButton = document.querySelector('#gameSection__startButton');
 var resetButton = document.querySelector('#gameSection__resetButton');
-var gameSection = document.querySelector('.gameSection');
+var gameSection = document.querySelector('.gameSection'); // gameOverSection
+
 var gameOver = document.querySelector(".gameoverSection");
 var retryButton = document.querySelector('.gameoverSection__retry-button');
 var gameoverScore = document.querySelector('.gameoverSection__yourScore');
@@ -49,6 +51,7 @@ var setLevel = function setLevel(event) {
     gameTimer.textContent = gameTime;
   }
 
+  gameTimer.style.color = "black";
   switchToSecondPage();
 };
 
@@ -58,17 +61,8 @@ buttons.forEach(function (button) {
 
 var switchToSecondPage = function switchToSecondPage() {
   welcome.style.display = 'none';
-  gameSection.style.display = 'unset'; // startButton.style.display = 'unset';
-  // resetButton.style.display = 'unset';
-  // gameButtons.style.display = 'unset';
-}; // const beginerStart = () => {
-//     gameSpeed = 500
-//     switchToSecondPage()
-// }
-// beginerLevel.addEventListener('click', beginerStart)
-// mediumLevel.addEventListener('click', () => gameSpeed = 1000)
-// expertLevel.addEventListener('click', () => gameSpeed = 1500)
-
+  gameSection.style.display = 'unset';
+};
 
 var cleanWindow = function cleanWindow() {
   scoreDisplay.innerHTML = '';
@@ -108,22 +102,12 @@ var startGame = function startGame() {
   if (onOFF) return;
   onOFF = true;
   moleStart();
-}; // beginerLevel.addEventListener("click", runGame)
-// const trackmallet = (event) => {
-//     cursor.style.left = event.pageX + 'px';
-//     cursor.style.top = event.pageY + 'px';
-// }
-// const rotateMalet = () => {
-//     cursor.classList.add("active")
-// }
-// const unRotateMalet = () => {
-//     cursor.classList.remove('active')
-// }
-
+};
 
 var gameButtonsAction = function gameButtonsAction(event) {
   if (event.target.innerHTML === 'START') {
     startGame();
+    gameTimer.style.color = "black";
     gameTimer.textContent = gameTime;
     interval = setInterval(countDownTimer, 1000);
     countDownTimer();
@@ -133,6 +117,7 @@ var gameButtonsAction = function gameButtonsAction(event) {
     cleanWindow();
     clearInterval(interval);
     interval = '';
+    gameTimer.style.color = "black";
     gameTimer.textContent = gameTime;
     currentgameTime = null;
   }
@@ -140,6 +125,7 @@ var gameButtonsAction = function gameButtonsAction(event) {
   if (event.target.innerHTML === 'GO BACK') {
     welcome.style.display = '';
     gameSection.style.display = 'none';
+    gameTimer.style.color = "black";
     clearInterval(interval);
     cleanWindow();
     interval = '';
@@ -155,7 +141,7 @@ var countDownTimer = function countDownTimer() {
 
   if (currentgameTime < 10) {
     gameTimer.style.color = "red";
-    gameTimer.style.fontSize = "20px";
+    gameTimer.style.fontSize = '25px';
   }
 
   if (currentgameTime == 0) {
@@ -168,8 +154,4 @@ var countDownTimer = function countDownTimer() {
 
 gameButtons.forEach(function (button) {
   return button.addEventListener('click', gameButtonsAction);
-}); // startButton.addEventListener('click', startGame);
-// resetButton.addEventListener('click', cleanWindow)
-// playWindow.addEventListener('mousemove', trackmallet);
-// playWindow.addEventListener('mousedown', rotateMalet);
-// playWindow.addEventListener('mouseup', unRotateMalet)
+});

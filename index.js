@@ -1,21 +1,18 @@
 // welcome section
 const buttons = document.querySelectorAll('.welcome__level');
-
-
+const welcome = document.querySelector(".welcome");
+// game section
 const holes = document.querySelectorAll(".gameSection__playGroundSection")
 const playWindow = document.querySelector(".gameSection__playGround")
-const welcome = document.querySelector(".welcome");
 const cursor = document.querySelector(".malet");
 const gameTimer = document.querySelector("#timer");
-
-
 const gameButtons = document.querySelectorAll('.buttons')
 const scoreDisplay = document.querySelector('#gameSection__result')
 const startButton = document.querySelector('#gameSection__startButton')
 const resetButton = document.querySelector('#gameSection__resetButton')
 const gameSection = document.querySelector('.gameSection')
 
-
+// gameOverSection
 const gameOver = document.querySelector(".gameoverSection")
 const retryButton = document.querySelector('.gameoverSection__retry-button')
 const gameoverScore = document.querySelector('.gameoverSection__yourScore')
@@ -55,6 +52,7 @@ const setLevel = (event) => {
         gameTime = 40;
         gameTimer.textContent = gameTime
     }
+    gameTimer.style.color = ("black");
     switchToSecondPage()
 
 }
@@ -65,21 +63,10 @@ buttons.forEach(button => button.addEventListener('click', setLevel));
 const switchToSecondPage = () => {
     welcome.style.display = 'none';
     gameSection.style.display = 'unset';
-    // startButton.style.display = 'unset';
-    // resetButton.style.display = 'unset';
-    // gameButtons.style.display = 'unset';
+
 
 }
 
-// const beginerStart = () => {
-//     gameSpeed = 500
-//     switchToSecondPage()
-// }
-
-
-// beginerLevel.addEventListener('click', beginerStart)
-// mediumLevel.addEventListener('click', () => gameSpeed = 1000)
-// expertLevel.addEventListener('click', () => gameSpeed = 1500)
 
 const cleanWindow = () => {
     scoreDisplay.innerHTML = '';
@@ -130,29 +117,12 @@ const startGame = () => {
 }
 
 
-// beginerLevel.addEventListener("click", runGame)
-
-
-
-// const trackmallet = (event) => {
-
-//     cursor.style.left = event.pageX + 'px';
-//     cursor.style.top = event.pageY + 'px';
-
-// }
-
-// const rotateMalet = () => {
-
-//     cursor.classList.add("active")
-// }
-// const unRotateMalet = () => {
-//     cursor.classList.remove('active')
-// }
 
 const gameButtonsAction = (event) => {
 
     if (event.target.innerHTML === 'START') {
         startGame()
+        gameTimer.style.color = ("black")
         gameTimer.textContent = gameTime;
         interval = setInterval(countDownTimer, 1000)
         countDownTimer();
@@ -162,6 +132,7 @@ const gameButtonsAction = (event) => {
         cleanWindow()
         clearInterval(interval);
         interval = '';
+        gameTimer.style.color = ("black")
         gameTimer.textContent = gameTime;
         currentgameTime = null
 
@@ -170,6 +141,7 @@ const gameButtonsAction = (event) => {
     if (event.target.innerHTML === 'GO BACK') {
         welcome.style.display = '';
         gameSection.style.display = 'none';
+        gameTimer.style.color = ("black")
         clearInterval(interval);
         cleanWindow()
         interval = '';
@@ -187,7 +159,7 @@ const countDownTimer = () => {
     gameTimer.textContent = currentgameTime
     if (currentgameTime < 10) {
         gameTimer.style.color = ("red")
-        gameTimer.style.fontSize = ("20px")
+        gameTimer.style.fontSize = ('25px')
     }
     if (currentgameTime == 0) {
         clearInterval(interval)
@@ -204,9 +176,3 @@ const countDownTimer = () => {
 
 
 gameButtons.forEach(button => button.addEventListener('click', gameButtonsAction))
-// startButton.addEventListener('click', startGame);
-// resetButton.addEventListener('click', cleanWindow)
-
-// playWindow.addEventListener('mousemove', trackmallet);
-// playWindow.addEventListener('mousedown', rotateMalet);
-// playWindow.addEventListener('mouseup', unRotateMalet)

@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 .main {
@@ -23,12 +24,12 @@
 .main .welcome h1 {
   text-align: center;
   color: burlywood;
-  font-size: 6em;
+  font-size: 5em;
 }
 .main .welcome h3 {
   text-align: center;
   color: black;
-  font-size: 3em;
+  font-size: 2em;
 }
 .main .welcome__buttons {
   display: flex;
@@ -37,8 +38,8 @@
 }
 .main .welcome__container {
   display: block;
-  margin-top: 10%;
-  width: 400px;
+  margin-top: 3%;
+  width: 450px;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
@@ -120,22 +121,6 @@
   display: none;
 }
 
-.malet {
-  width: 60px;
-  height: 60px;
-  position: absolute;
-  top: 50px;
-  left: 100px;
-  background-image: url("./cursor.png");
-  background-size: 100%, 100%;
-  transform: translate(-50%, -50%);
-  transition: 0.2ms;
-}
-
-.active {
-  transform: translate(-50%, -50%) rotate(-120deg);
-}
-
 .gameSection__molehill {
   position: relative;
 }
@@ -190,9 +175,24 @@
 .gameoverSection__retry-button {
   margin-top: 25px;
   padding: 10px;
-  color: #fbff00;
+  color: goldenrod;
   background-color: #e7853e;
-  border: 1px solid yellow;
+  border: 1px solid red;
   border-radius: 10px;
-  font-size: 22px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 410px) {
+  .gameSection {
+    margin-top: 2%;
+    width: 360px;
+    height: 480px;
+  }
+  .gameSection__playGround {
+    margin: auto;
+    height: 350px;
+    width: 350px;
+    gap: 1px;
+  }
 }
