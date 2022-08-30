@@ -77,11 +77,11 @@ var moleStart = function moleStart() {
     var timer;
     var moleImage = document.createElement("img");
     moleImage.classList.add("mole");
-    moleImage.src = './molebody.png';
+    moleImage.src = './pictures/molebody.png';
     moleImage.addEventListener('click', function () {
       score += 5;
       scoreDisplay.innerHTML = score;
-      moleImage.src = './molebodyAfter.png';
+      moleImage.src = './pictures/molebodyAfter.png';
       clearTimeout(timer);
       setTimeout(function () {
         hole.removeChild(moleImage);

@@ -84,12 +84,12 @@ const moleStart = () => {
 
         const moleImage = document.createElement("img");
         moleImage.classList.add("mole");
-        moleImage.src = './molebody.png'
+        moleImage.src = './pictures/molebody.png'
         moleImage.addEventListener('click', () => {
 
             score += 5;
             scoreDisplay.innerHTML = score
-            moleImage.src = './molebodyAfter.png'
+            moleImage.src = './pictures/molebodyAfter.png'
             clearTimeout(timer)
             setTimeout(() => {
                 hole.removeChild(moleImage)
