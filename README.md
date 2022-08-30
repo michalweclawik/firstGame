@@ -60,7 +60,7 @@ Add notes about how to use the system.
 ## 📸 Screenshots <a name = "screenshots"></a>
 
 <div>
-<img  src="./pictures/capture1.png" alt="Screenshots">
+<img  src="./pictures/Capture1.PNG" alt="Screenshots">
 <img src="./pictures/capture2.png" alt="Screenshots2">
 </div>
 
