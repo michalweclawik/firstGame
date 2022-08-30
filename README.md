@@ -1,22 +1,17 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width=200px height=200px src="./mole.png" alt="Project logo"></a>
+ <img width=250px height=200px src="./mole.png" alt="Project logo"></a>
 </p>
 
 <h3 align="center">Whack-A-Mole Game</h3>
 
 <div align="center">
 
-[![Status](https://img.shields.io/badge/status-active-success.svg)]()
-[![GitHub Issues](https://img.shields.io/github/issues/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/pulls)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
-
 </div>
 
 ---
 
-<p align="center"> Few lines describing your project.
+<p align="center"> First version of Whack-A-Mole-Game with  3 difficulty levels. A  game  allows you to re-set game at any point in time and also changle the difficulty level.
     <br> 
 </p>
 
@@ -96,14 +91,14 @@ Add additional notes about how to deploy this on a live system.
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
-- [MongoDB](https://www.mongodb.com/) - Database
+<img width=50px height=50px src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png" alt="JS">
 - [Express](https://expressjs.com/) - Server Framework
 - [VueJs](https://vuejs.org/) - Web Framework
 - [NodeJs](https://nodejs.org/en/) - Server Environment
 
 ## ✍️ Authors <a name = "authors"></a>
 
-- [@kylelobo](https://github.com/kylelobo) - Idea & Initial work
+- [@michalweclawik](https://github.com/michalweclawik) - Idea & Initial work
 
 See also the list of [contributors](https://github.com/kylelobo/The-Documentation-Compendium/contributors) who participated in this project.
 
