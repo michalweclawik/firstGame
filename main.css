@@ -66,7 +66,7 @@
 .gameSection {
   margin-top: 5%;
   width: 406px;
-  height: 480px;
+  height: 550px;
   display: flex;
   flex-direction: column;
   background-color: lightsalmon;
@@ -74,6 +74,7 @@
   opacity: 0.91;
   border-radius: 10px;
   display: none;
+  justify-content: center;
 }
 .gameSection__timer {
   margin: 10px;
@@ -93,6 +94,13 @@
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
   gap: 20px;
+  margin-bottom: 1px;
+}
+.gameSection .buttons {
+  margin-top: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 #gameSection__startButton,
@@ -102,8 +110,6 @@
   border: 0.5px solid red;
   border-radius: 5px;
   width: 100px;
-  margin: auto;
-  margin-bottom: 10px;
   opacity: 0.8;
   cursor: pointer;
 }
@@ -115,10 +121,6 @@
 
 .buttons {
   margin-top: 2%;
-}
-
-.gameSection > .buttons {
-  display: none;
 }
 
 .gameSection__molehill {
@@ -175,7 +177,7 @@
 .gameoverSection__retry-button {
   margin-top: 25px;
   padding: 10px;
-  color: goldenrod;
+  color: red;
   background-color: #e7853e;
   border: 1px solid red;
   border-radius: 10px;
@@ -183,11 +185,11 @@
   cursor: pointer;
 }
 
-@media only screen and (max-width: 410px) {
+@media only screen and (max-width: 415px) {
   .gameSection {
     margin-top: 2%;
     width: 360px;
-    height: 480px;
+    height: 500px;
   }
   .gameSection__playGround {
     margin: auto;
@@ -195,4 +197,11 @@
     width: 350px;
     gap: 1px;
   }
+}
+.welcome__container {
+  width: 360px;
+}
+
+.welcome__mole {
+  width: 360px;
 }
