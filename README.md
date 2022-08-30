@@ -62,7 +62,6 @@ Add notes about how to use the system.
 <div>
 <img  src="./pictures/capture1.png" alt="Screenshots">
 <img src="./pictures/capture2.png" alt="Screenshots2">
-
 </div>
 
 ## ⛏️ Built Using <a name = "built_using"></a>
