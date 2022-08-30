@@ -60,8 +60,8 @@ Add notes about how to use the system.
 ## 📸 Screenshots <a name = "screenshots"></a>
 
 <div>
-<img width=200px height=200px src="./pictures/Capture1.PNG" alt="Screenshots">
-<img width=200px height=200px src="./pictures/Capture2.PNG" alt="Screenshots2">
+<img width=400px height=400px src="./pictures/Capture1.PNG" alt="Screenshots">
+<img width=400px height=400px src="./pictures/Capture2.PNG" alt="Screenshots2">
 </div>
 
 ## ⛏️ Built Using <a name = "built_using"></a>
