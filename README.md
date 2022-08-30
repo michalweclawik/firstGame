@@ -19,13 +19,13 @@
 
 - [About](#about)
 - [Getting Started](#getting_started)
-- [Deployment](#deployment)
+<!-- - [Deployment](#deployment) -->
 - [Usage](#usage)
 - [Built Using](#built_using)
-- [TODO](../TODO.md)
-- [Contributing](../CONTRIBUTING.md)
+  <!-- - [TODO](../TODO.md) -->
+  <!-- - [Contributing](../CONTRIBUTING.md) -->
 - [Authors](#authors)
-- [Acknowledgments](#acknowledgement)
+<!-- - [Acknowledgments](#acknowledgement) -->
 
 ## 🧐 About <a name = "about"></a>
 
@@ -37,21 +37,21 @@ It was a fantastic adventure. After compliting project I spent hours playing in 
 
 Whack-A-Mole-Game is fully web based. Once you whack mole you getting poitns and mole is loosing glsses ! Be fast time is limited !
 
-- [Chose difficulty level]
+- Chose difficulty level
 
-- [Click the Start Button]
+- Click the Start Button
 
-- [Mole will pop out from the random hole]
+- Mole will pop out from the random hole
 
-- [Simply just click on mole to get 5 points]
+- Simply just click on mole to get 5 points
 
-- [Be fast time is clocking]
+- Be fast time is clocking
 
-- [If you want to reset game or change dificulty level use buttons provided]
+- If you want to reset game or change dificulty level use buttons provided
 
-- [Game Over Page will pop up after the timer is out]
+- Game Over Page will pop up after the timer is out
 
-- [Want to play more just click go again button]
+- Want to play more just click go again button
 
 ## 🎈 Usage <a name="usage"></a>
 
