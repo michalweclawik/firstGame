@@ -20,6 +20,7 @@
 - [About](#about)
 - [Getting Started](#getting_started)
 - [Usage](#usage)
+- [Screenshots](#screenshots)
 - [Built Using](#built_using)
   <!-- - [TODO](../TODO.md) -->
   <!-- - [Contributing](../CONTRIBUTING.md) -->
@@ -40,7 +41,7 @@ Whack-A-Mole-Game is fully web based. Once you whack mole you getting poitns and
 
 - Click the Start Button
 
-- Mole will pop out from the random hole
+- Mole will pop out from the random hole!
 
 - Simply just click on mole to get 5 points
 
@@ -50,13 +51,13 @@ Whack-A-Mole-Game is fully web based. Once you whack mole you getting poitns and
 
 - Game Over Page will pop up after the timer is out
 
-- Want to play more just click go again button
+- Want to play more just click go again button!
 
 ## 🎈 Usage <a name="usage"></a>
 
 Add notes about how to use the system.
 
-## 🚀 Deployment <a name = "deployment"></a>
+## 📸 Screenshots <a name = "screenshots"></a>
 
 Add additional notes about how to deploy this on a live system.
 
