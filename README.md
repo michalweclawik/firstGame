@@ -29,57 +29,13 @@
 
 ## 🧐 About <a name = "about"></a>
 
-Write about 1-2 paragraphs describing the purpose of your project.
+This project was an oportunity to test gained knowledge after 4 weeks of software development course at_nology
+
+It was a fantastic adventure. After compliting project I spent hours playing in that game with the satisfaction that is workig. I hope you will enjoy playing as well !
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
-
-### Prerequisites
-
-What things you need to install the software and how to install them.
-
-```
-Give examples
-```
-
-### Installing
-
-A step by step series of examples that tell you how to get a development env running.
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo.
-
-## 🔧 Running the tests <a name = "tests"></a>
-
-Explain how to run the automated tests for this system.
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
+Whack-A-Mole-Game is fully web based. Once you whack mole you getting poitns and mole is loosing glsses ! Be fast time is limited !
 
 ## 🎈 Usage <a name="usage"></a>
 
@@ -97,7 +53,8 @@ Add additional notes about how to deploy this on a live system.
 <img width=50px height=50px src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/sass/sass.png" alt="SASS">
 <img width=50px height=50px src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/visual-studio-code/visual-studio-code.png" alt="VS">
 </div>
-## ✍️ Authors <a name = "authors"></a>
+
+## ✍️ Author <a name = "authors"></a>
 
 - [@michalweclawik](https://github.com/michalweclawik) - Idea & Initial work
 
