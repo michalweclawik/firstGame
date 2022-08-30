@@ -40,15 +40,15 @@ retryButton.addEventListener('click', resetGame);
 const setLevel = (event) => {
     console.log(event.target.innerHTML)
     if (event.target.innerHTML === 'Beginer') {
-        gameSpeed = 1500;
+        gameSpeed = 1300;
         gameTime = 60;
         gameTimer.textContent = gameTime
     } else if (event.target.innerHTML === 'Medium') {
-        gameSpeed = 1000;
+        gameSpeed = 900;
         gameTime = 50;
         gameTimer.textContent = gameTime
     } else if (event.target.innerHTML === 'Expert') {
-        gameSpeed = 500;
+        gameSpeed = 600;
         gameTime = 40;
         gameTimer.textContent = gameTime
     }
@@ -94,7 +94,7 @@ const moleStart = () => {
             setTimeout(() => {
                 hole.removeChild(moleImage)
                 moleStart();
-            }, 500)
+            }, 400)
 
         })
         hole.appendChild(moleImage)
