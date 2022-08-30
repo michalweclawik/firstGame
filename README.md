@@ -37,6 +37,8 @@ It was a fantastic adventure. After compliting project I spent hours playing in 
 
 Whack-A-Mole-Game is fully web based. Once you whack mole you getting poitns and mole is loosing glsses ! Be fast time is limited !
 
+## 🎈 Usage <a name="usage"></a>
+
 - Chose difficulty level
 
 - Click the Start Button
@@ -52,10 +54,6 @@ Whack-A-Mole-Game is fully web based. Once you whack mole you getting poitns and
 - Game Over Page will pop up after the timer is out
 
 - Want to play more just click go again button!
-
-## 🎈 Usage <a name="usage"></a>
-
-Add notes about how to use the system.
 
 ## 📸 Screenshots <a name = "screenshots"></a>
 
