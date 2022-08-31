@@ -22,17 +22,7 @@ var score = 0;
 var gameSpeed = 0;
 var gameTime = null;
 var interval;
-var currentgameTime = null;
-
-resetGame = function resetGame() {
-  cleanWindow();
-  welcome.style.display = '';
-  gameSection.style.display = 'none';
-  clearInterval(interval);
-  gameOver.style.visibility = 'hidden';
-};
-
-retryButton.addEventListener('click', resetGame);
+var currentgameTime = null; // welcome page
 
 var setLevel = function setLevel(event) {
   console.log(event.target.innerHTML);
@@ -52,12 +42,9 @@ var setLevel = function setLevel(event) {
   }
 
   gameTimer.style.color = "black";
+  gameTimer.style.fontSize = '20px';
   switchToSecondPage();
 };
-
-buttons.forEach(function (button) {
-  return button.addEventListener('click', setLevel);
-});
 
 var switchToSecondPage = function switchToSecondPage() {
   welcome.style.display = 'none';
@@ -68,7 +55,8 @@ var cleanWindow = function cleanWindow() {
   scoreDisplay.innerHTML = '';
   score = 0;
   onOFF = null;
-};
+}; // mole  logic
+
 
 var moleStart = function moleStart() {
   if (onOFF) {
@@ -102,7 +90,8 @@ var startGame = function startGame() {
   if (onOFF) return;
   onOFF = true;
   moleStart();
-};
+}; // game page logic button 
+
 
 var gameButtonsAction = function gameButtonsAction(event) {
   if (event.target.innerHTML === 'START') {
@@ -145,13 +134,25 @@ var countDownTimer = function countDownTimer() {
   }
 
   if (currentgameTime == 0) {
-    clearInterval(interval); // cleanWindow()
-
+    clearInterval(interval);
     gameOver.style.visibility = 'visible';
     gameoverScore.innerHTML += score;
   }
 };
 
+resetGame = function resetGame() {
+  cleanWindow();
+  score = 0;
+  welcome.style.display = '';
+  gameSection.style.display = 'none';
+  clearInterval(interval);
+  gameOver.style.visibility = 'hidden';
+};
+
+buttons.forEach(function (button) {
+  return button.addEventListener('click', setLevel);
+});
+retryButton.addEventListener('click', resetGame);
 gameButtons.forEach(function (button) {
   return button.addEventListener('click', gameButtonsAction);
 });

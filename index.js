@@ -17,6 +17,7 @@ const gameOver = document.querySelector(".gameoverSection")
 const retryButton = document.querySelector('.gameoverSection__retry-button')
 const gameoverScore = document.querySelector('.gameoverSection__yourScore')
 
+
 let onOFF = false;
 let score = 0;
 let gameSpeed = 0;
@@ -25,18 +26,7 @@ let interval
 let currentgameTime = null;
 
 
-resetGame = () => {
-    cleanWindow()
-    welcome.style.display = '';
-    gameSection.style.display = 'none';
-    clearInterval(interval);
-    gameOver.style.visibility = 'hidden';
-}
-
-
-retryButton.addEventListener('click', resetGame);
-
-
+// welcome page
 const setLevel = (event) => {
     console.log(event.target.innerHTML)
     if (event.target.innerHTML === 'Beginner') {
@@ -53,40 +43,33 @@ const setLevel = (event) => {
         gameTimer.textContent = gameTime
     }
     gameTimer.style.color = ("black");
-    switchToSecondPage()
-
+    gameTimer.style.fontSize = ('20px');
+    switchToSecondPage();
 }
-
-buttons.forEach(button => button.addEventListener('click', setLevel));
 
 
 const switchToSecondPage = () => {
     welcome.style.display = 'none';
     gameSection.style.display = 'unset';
-
-
 }
-
 
 const cleanWindow = () => {
     scoreDisplay.innerHTML = '';
     score = 0;
     onOFF = null;
 }
-
-
-
+// mole  logic
 const moleStart = () => {
     if (onOFF) {
         const randomNumber = Math.floor(Math.random() * holes.length);
-        const hole = holes[randomNumber]
+        const hole = holes[randomNumber];
+
         let timer
         const moleImage = document.createElement("img");
         moleImage.classList.add("mole");
         moleImage.src = './pictures/molebody.png'
+
         moleImage.addEventListener('click', () => {
-
-
             score += 5;
             scoreDisplay.innerHTML = score
             moleImage.src = './pictures/molebodyAfter.png'
@@ -95,10 +78,8 @@ const moleStart = () => {
                 hole.removeChild(moleImage)
                 moleStart();
             }, 400)
-
         })
         hole.appendChild(moleImage)
-
         timer = setTimeout(() => {
             hole.removeChild(moleImage)
             moleStart();
@@ -111,11 +92,9 @@ const startGame = () => {
     if (onOFF) return
     onOFF = true;
     moleStart();
-
 }
 
-
-
+// game page logic button 
 const gameButtonsAction = (event) => {
 
     if (event.target.innerHTML === 'START') {
@@ -146,7 +125,6 @@ const gameButtonsAction = (event) => {
         gameTimer.textContent = gameTime;
         currentgameTime = null
 
-
     }
 }
 
@@ -161,16 +139,22 @@ const countDownTimer = () => {
     }
     if (currentgameTime == 0) {
         clearInterval(interval)
-        // cleanWindow()
         gameOver.style.visibility = 'visible';
         gameoverScore.innerHTML += score;
 
     }
 
 }
+resetGame = () => {
+    cleanWindow()
+    score = 0;
+    welcome.style.display = '';
+    gameSection.style.display = 'none';
+    clearInterval(interval);
+    gameOver.style.visibility = 'hidden';
+}
 
 
-
-
-
+buttons.forEach(button => button.addEventListener('click', setLevel));
+retryButton.addEventListener('click', resetGame);
 gameButtons.forEach(button => button.addEventListener('click', gameButtonsAction))
