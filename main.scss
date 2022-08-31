@@ -4,8 +4,6 @@
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-
-
 .main {
     display: flex;
     flex-direction: column;
@@ -15,7 +13,6 @@
     background-color: wheat;
     background-size: cover;
     overflow: hidden;
-
 
     .welcome {
 
@@ -120,7 +117,6 @@
 
 }
 
-
 #gameSection__startButton,
 #gameSection__resetButton,
 #gameSection__mainButton {
@@ -131,7 +127,6 @@
     opacity: 0.8;
     cursor: pointer;
 
-
     &:hover {
         opacity: 1;
     }
@@ -139,7 +134,6 @@
 
 .buttons {
     margin-top: 2%;
-
 }
 
 .gameSection__molehill {
@@ -151,7 +145,6 @@
     background-image: url("./pictures/rsz_mole2.png");
     background-repeat: no-repeat;
     position: relative;
-
 
 }
 
@@ -167,7 +160,6 @@
     transform: translateX(-50%);
     bottom: 38%;
     animation: fadeUp 0.15s ease-out;
-
 
 }
 
@@ -194,7 +186,6 @@
     font-size: 30px;
     color: rgb(251, 255, 0);
     font-family: Arial, Helvetica, sans-serif;
-
 
     &__yourScore {
         padding-top: 1%;
@@ -223,6 +214,16 @@
 
 }
 
+
+.welcome__container {
+    width: 360px;
+
+}
+
+.welcome__mole {
+    width: 360px;
+}
+
 @media only screen and (max-width: 415px) {
     .gameSection {
         margin-top: 2%;
@@ -237,14 +238,4 @@
             gap: 1px;
         }
     }
-}
-
-.welcome__container {
-    width: 360px;
-
-
-}
-
-.welcome__mole {
-    width: 360px;
 }

@@ -189,6 +189,14 @@
   opacity: 0.8;
 }
 
+.welcome__container {
+  width: 360px;
+}
+
+.welcome__mole {
+  width: 360px;
+}
+
 @media only screen and (max-width: 415px) {
   .gameSection {
     margin-top: 2%;
@@ -201,11 +209,4 @@
     width: 350px;
     gap: 1px;
   }
-}
-.welcome__container {
-  width: 360px;
-}
-
-.welcome__mole {
-  width: 360px;
 }
