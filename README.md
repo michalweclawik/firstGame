@@ -11,7 +11,7 @@
 
 ---
 
-<p align="center"> First version of Whack-A-Mole-Game with  3 difficulty levels. A  game  allows you to re-set game at any point in time and also changle the difficulty level.
+<p align="center"> First version of Whack-A-Mole-Game with  3 difficulty levels. The game allows you to re-set at any point in time and change the difficulty level.
     <br> 
 </p>
 
