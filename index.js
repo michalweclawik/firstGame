@@ -70,7 +70,7 @@ const switchToSecondPage = () => {
 
 const cleanWindow = () => {
     scoreDisplay.innerHTML = '';
-    score = 0
+    score = 0;
     onOFF = null;
 }
 

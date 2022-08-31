@@ -69,52 +69,59 @@
             }
         }
     }
-}
-
-.gameSection {
-    margin-top: 5%;
-    width: 406px;
-    height: 550px;
-    display: flex;
-    flex-direction: column;
-    background-color: lightsalmon;
-    overflow: hidden;
-    opacity: 0.91;
-    border-radius: 10px;
-    display: none;
-    justify-content: center;
 
 
-    &__timer {
-        margin: 10px;
-        font-size: 20px;
-    }
-
-    &__score {
-        color: azure;
-        font-size: 2em;
-        margin: 20px;
-        text-align: center;
-    }
-
-    &__playGround {
-        margin: auto;
-        height: 400px;
-        width: 400px;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        gap: 20px;
-        margin-bottom: 1px;
-    }
-
-    .buttons {
-        margin-top: 1px;
+    .gameSection {
+        margin-top: 5%;
+        width: 406px;
+        height: 550px;
         display: flex;
-        align-items: center;
-        justify-content: space-around;
-    }
+        flex-direction: column;
+        background-color: lightsalmon;
+        overflow: hidden;
+        opacity: 0.91;
+        border-radius: 10px;
+        display: none;
+        justify-content: center;
 
+
+        &__timer {
+            margin: 10px;
+            font-size: 20px;
+        }
+
+        &__score {
+            color: azure;
+            font-size: 2em;
+            margin: 20px;
+            text-align: center;
+        }
+
+        &__playGroundGrid {
+            background-image: url("./pictures/rsz_mole2.png");
+            background-repeat: no-repeat;
+            position: relative;
+        }
+
+        &__playGround {
+            margin: auto;
+            height: 400px;
+            width: 400px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 1px;
+        }
+
+        .buttons {
+            margin-top: 1px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+    }
 }
 
 #gameSection__startButton,
@@ -132,25 +139,16 @@
     }
 }
 
-.buttons {
-    margin-top: 2%;
-}
+
 
 .gameSection__molehill {
     position: relative;
 }
 
-.gameSection__playGroundGrid {
 
-    background-image: url("./pictures/rsz_mole2.png");
-    background-repeat: no-repeat;
-    position: relative;
-
-}
 
 .mole {
     height: 70px;
-
 }
 
 .gameSection__playGroundGrid .mole {
@@ -160,7 +158,6 @@
     transform: translateX(-50%);
     bottom: 38%;
     animation: fadeUp 0.15s ease-out;
-
 }
 
 @keyframes fadeUp {
@@ -215,10 +212,7 @@
 }
 
 
-.welcome__container {
-    width: 360px;
 
-}
 
 .welcome__mole {
     width: 360px;
@@ -238,4 +232,15 @@
             gap: 1px;
         }
     }
+
+    .welcome__container {
+        max-width: 100%;
+    }
+
+    .main .welcome h1 {
+        font-size: 4em;
+    }
+
+
+
 }
