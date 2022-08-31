@@ -143,15 +143,15 @@
   left: 50%;
   transform: translateX(-50%);
   bottom: 38%;
-  animation: rise 0.1s ease-out;
+  animation: fadeUp 0.1s ease-out;
 }
 
-@keyframes rise {
+@keyframes fadeUp {
   0% {
-    transform: translateX(0px) translateY(25px);
+    transform: translateX(-50%) translateY(20%);
   }
-  2% {
-    transform: translateX(-50%) translateY(25%);
+  100% {
+    transform: translateX(-50%) translateY(0);
   }
 }
 .gameoverSection {
@@ -184,6 +184,9 @@
   font-size: 25px;
   font-weight: bold;
   cursor: pointer;
+}
+.gameoverSection__retry-button:hover {
+  opacity: 0.8;
 }
 
 @media only screen and (max-width: 415px) {

@@ -38,7 +38,7 @@ var setLevel = function setLevel(event) {
   console.log(event.target.innerHTML);
 
   if (event.target.innerHTML === 'Beginer') {
-    gameSpeed = 1300;
+    gameSpeed = 1500;
     gameTime = 60;
     gameTimer.textContent = gameTime;
   } else if (event.target.innerHTML === 'Medium') {

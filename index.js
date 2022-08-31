@@ -40,7 +40,7 @@ retryButton.addEventListener('click', resetGame);
 const setLevel = (event) => {
     console.log(event.target.innerHTML)
     if (event.target.innerHTML === 'Beginer') {
-        gameSpeed = 1300;
+        gameSpeed = 1500;
         gameTime = 60;
         gameTimer.textContent = gameTime
     } else if (event.target.innerHTML === 'Medium') {
@@ -81,11 +81,11 @@ const moleStart = () => {
         const randomNumber = Math.floor(Math.random() * holes.length);
         const hole = holes[randomNumber]
         let timer
-
         const moleImage = document.createElement("img");
         moleImage.classList.add("mole");
         moleImage.src = './pictures/molebody.png'
         moleImage.addEventListener('click', () => {
+
 
             score += 5;
             scoreDisplay.innerHTML = score
@@ -106,8 +106,6 @@ const moleStart = () => {
     }
     return
 }
-
-
 
 const startGame = () => {
     if (onOFF) return
