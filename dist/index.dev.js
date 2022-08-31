@@ -4,7 +4,7 @@
 var buttons = document.querySelectorAll('.welcome__level');
 var welcome = document.querySelector(".welcome"); // game section
 
-var holes = document.querySelectorAll(".gameSection__playGroundSection");
+var holes = document.querySelectorAll(".gameSection__playGroundGrid");
 var playWindow = document.querySelector(".gameSection__playGround");
 var cursor = document.querySelector(".malet");
 var gameTimer = document.querySelector("#timer");
@@ -37,7 +37,7 @@ retryButton.addEventListener('click', resetGame);
 var setLevel = function setLevel(event) {
   console.log(event.target.innerHTML);
 
-  if (event.target.innerHTML === 'Beginer') {
+  if (event.target.innerHTML === 'Beginner') {
     gameSpeed = 1500;
     gameTime = 60;
     gameTimer.textContent = gameTime;

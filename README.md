@@ -35,25 +35,25 @@ It was a fantastic adventure. After compliting project I spent hours playing in 
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
-Whack-A-Mole-Game is fully web based. Once you whack mole you getting poitns and mole is loosing glasses ! Be fast time is limited !
+Whack a Mole is fully web based game. Once you whack the mole, you get the points and mole losses glasses. Be fast time is limited !
 
 ## 🎈 Usage <a name="usage"></a>
 
-- Chose difficulty level
+- Choose difficulty level
 
 - Click the Start Button
 
 - Mole will pop out from the random hole!
 
-- Simply just click on mole to get 5 points
+- Click on mole to get 5 points
 
-- Be fast time is clocking
+- Be fast time is running
 
 - If you want to reset game or change dificulty level use buttons provided
 
 - Game Over Page will pop up after the timer is out
 
-- Want to play more just click go again button!
+- Want to play more? Click GO AGAIN button
 
 ## 📸 Screenshots <a name = "screenshots"></a>
 

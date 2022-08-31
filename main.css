@@ -127,7 +127,7 @@
   position: relative;
 }
 
-.gameSection__playGroundSection {
+.gameSection__playGroundGrid {
   background-image: url("./pictures/rsz_mole2.png");
   background-repeat: no-repeat;
   position: relative;
@@ -137,13 +137,13 @@
   height: 70px;
 }
 
-.gameSection__playGroundSection .mole {
+.gameSection__playGroundGrid .mole {
   width: 70%;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   bottom: 38%;
-  animation: fadeUp 0.1s ease-out;
+  animation: fadeUp 0.15s ease-out;
 }
 
 @keyframes fadeUp {
